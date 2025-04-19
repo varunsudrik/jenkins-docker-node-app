@@ -10,9 +10,16 @@ pipeline {
     stage('Install Dependencies') {
       steps {
         sh '''
-                cd express-app
+                cd backend
                 npm install
-                node app.js
+                '''
+      }
+    }
+    stage('Run Test') {
+      steps {
+        sh '''
+                cd backend
+                npm run test
                 '''
       }
     }
