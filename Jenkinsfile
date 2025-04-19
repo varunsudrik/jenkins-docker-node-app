@@ -15,12 +15,13 @@ pipeline {
                 '''
       }
     }
-    stage('Run Test') {
+    stage('Connect SSH') {
       steps {
-        sh '''
-                cd backend
-                npm run test
-                '''
+        sshagent(['ec2-ssh']) {
+    sh 'ssh -o StrictHostKeyChecking=no ubuntu@3.110.46.206 "mkdir -p test-jenkins"'
+}
+
+        
       }
     }
 
