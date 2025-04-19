@@ -12,7 +12,7 @@ require("dotenv").config();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/")));
 app.use(cors());
-console.log("MONGO_URI", process.env.MONGO_URI);
+// console.log("MONGO_URI", process.env.MONGO_URI);
 mongoose.connect(
   process.env.MONGO_URI,
   {
