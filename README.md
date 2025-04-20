@@ -1,4 +1,4 @@
-# test-repo 🚀
+# jenkins-docker-node-app 🚀
 
 This project is a sample backend application powered by **Node.js**, packaged with **Docker**, and deployed using a **CI/CD pipeline** with **Jenkins** and **SonarQube** for static code analysis.
 
